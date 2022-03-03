@@ -5,4 +5,9 @@
 <hr>
 <input type="text" [(ngModel)]="name" (ngModelChange)="name = $event">
 <br><br><hr>
-<toggle [(checked)]="isChecked"></toggle>
+<!-- toggleComp là instance của ToggleComponent -->
+<toggle #toggleComp [(checked)]="isChecked"></toggle>
+
+<!-- toglleComp thông qua nút này để tương tác với ToggleComponent -->
+<br><br>
+<button (click)="toggleComp.toggle()">Toggle Me</button>

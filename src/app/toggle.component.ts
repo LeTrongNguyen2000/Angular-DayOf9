@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
       class="toggle-wrapper"
       [class.checked]="checked"
       tabindex="0"
-      (click)="checkedChange.emit(!checked)"
+      (click)="toggle()"
     >
       <div class="toggle"></div>
     </div>
@@ -71,4 +71,9 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 export class ToggleComponent {
   @Input() checked: boolean | undefined;
   @Output() checkedChange = new EventEmitter<boolean>();
+  //Dùng Output là cách giao tiếp thứ 2 giữa các component sử dụng EventEmitter
+
+  toggle(){
+    this.checkedChange.emit(!this.checked);
+  }
 }

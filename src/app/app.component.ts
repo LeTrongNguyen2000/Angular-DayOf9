@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'DayOf9';
 
   name = 'Hello Angular 12';
+  isChecked = true;
 }

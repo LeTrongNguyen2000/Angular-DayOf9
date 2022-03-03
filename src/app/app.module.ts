@@ -5,12 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { ToggleButtonComponent } from './toggle-button.component';
+import { ToggleComponent } from './toggle.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToggleButtonComponent,
+    ToggleComponent,
     HelloComponent,
   ],
   imports: [
